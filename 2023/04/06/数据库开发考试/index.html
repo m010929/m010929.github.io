@@ -8,15 +8,21 @@
   <link rel="dns-prefetch" href="http://m010929.github.io">
   <title>note</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人笔记和一些其他内容">
-<meta property="og:type" content="website">
+  <meta name="description" content="数据库开发（本篇仅限用于应对南京大学软件学院数据库开发课程考试）  视图可以使用的场景  控制权限，重构数据库需要满足原有应用的访问   不能把数据库当作黑盒使用，因为每个数据库是非常不同的：锁机制（基本差别），三值理论（细微的差别（比如对NULL值的处理））    现实存在并发，我们需要保持数据的一致性，所以要做并发控制锁机制，使得并发控制成为可能不同的数据库，而实现锁机制是不一样的。比如Ora">
+<meta property="og:type" content="article">
 <meta property="og:title" content="note">
-<meta property="og:url" content="http://m010929.github.io/index.html">
+<meta property="og:url" content="http://m010929.github.io/2023/04/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91%E8%80%83%E8%AF%95/index.html">
 <meta property="og:site_name" content="note">
-<meta property="og:description" content="个人笔记和一些其他内容">
+<meta property="og:description" content="数据库开发（本篇仅限用于应对南京大学软件学院数据库开发课程考试）  视图可以使用的场景  控制权限，重构数据库需要满足原有应用的访问   不能把数据库当作黑盒使用，因为每个数据库是非常不同的：锁机制（基本差别），三值理论（细微的差别（比如对NULL值的处理））    现实存在并发，我们需要保持数据的一致性，所以要做并发控制锁机制，使得并发控制成为可能不同的数据库，而实现锁机制是不一样的。比如Ora">
 <meta property="og:locale" content="ch_ZN">
+<meta property="og:image" content="http://m010929.github.io/img/DBAimg/DBA01.png">
+<meta property="og:image" content="http://m010929.github.io/img/DBAimg/DBA02.png">
+<meta property="og:image" content="http://m010929.github.io/img/DBAimg/DBA03.png">
+<meta property="article:published_time" content="2023-04-06T12:39:49.391Z">
+<meta property="article:modified_time" content="2023-04-10T12:35:52.649Z">
 <meta property="article:author" content="MaZirui">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://m010929.github.io/img/DBAimg/DBA01.png">
   
     <link rel="alternative" href="/atom.xml" title="note" type="application/atom+xml">
   
@@ -152,9 +158,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-数据库开发考试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-数据库开发考试" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
@@ -204,6 +208,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -211,16 +236,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/04/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91%E8%80%83%E8%AF%95/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://m010929.github.io/2023/04/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91%E8%80%83%E8%AF%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2022/10/29/cloudCaculate/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -235,171 +319,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-cloudCaculate" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="云计算"><a href="#云计算" class="headerlink" title="云计算"></a>云计算</h1><p>说明：以下笔记内容均来自南京大学云计算选修课课程内容复习</p>
-        
-          <a class="article-more-a" href="/2022/10/29/cloudCaculate/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/10/29/cloudCaculate/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91"><span class="toc-number">1.</span> <span class="toc-text">数据库开发</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
-    <article id="post-OS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h2 id="操作系统概论"><a href="#操作系统概论" class="headerlink" title="操作系统概论"></a>操作系统概论</h2><h3 id="操作系统与计算机系统"><a href="#操作系统与计算机系统" class="headerlink" title="操作系统与计算机系统"></a>操作系统与计算机系统</h3><p>OS是计算机系统最基础的系统软件，管理软硬件资源、控制程序执行，改善人机界面，合理组织计算机工作流程，为用户使用计算机提供良好运行环境</p>
-<p>OS是计算机系统的公共软件基础设施，所有应用程序共用OS服务，且OS内核是反应式reactive机制（中断驱动的）</p>
-<p>从用户角度看，OS管理计算机系统的各种资源，扩充硬件的功能，控制程序的执行 </p>
-<p>从人机交互看，OS是用户与机器的接口，提供良好的人机界面，方便用户使用计算机 </p>
-<p>从系统结构看，OS是一个大型软件系统，其功能复杂，体系庞大，采用层次式、模块化的程序结构</p>
-        
-          <a class="article-more-a" href="/2022/09/25/OS/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/09/25/OS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
 
   
-    <article id="post-express" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="note-of-Express"><a href="#note-of-Express" class="headerlink" title="note of Express"></a>note of Express</h1><h2 id="1-初接触express"><a href="#1-初接触express" class="headerlink" title="1 初接触express"></a>1 初接触express</h2><h3 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h3><p>express为Node.js上的web开发框架</p>
-<p>Express 框架核心特性：</p>
-<p>可以设置中间件来响应 HTTP 请求。</p>
-<p>定义了路由表用于执行不同的 HTTP 请求动作。</p>
-<p>可以通过向模板传递参数来动态渲染 HTML 页面。</p>
-        
-          <a class="article-more-a" href="/2022/09/24/express/#more">more >></a>
-        
-      
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/09/24/express/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -422,8 +367,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

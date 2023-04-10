@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://m010929.github.io">
-  <title>note</title>
+  <title>Archives: 2023/4 | note</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="个人笔记和一些其他内容">
 <meta property="og:type" content="website">
 <meta property="og:title" content="note">
-<meta property="og:url" content="http://m010929.github.io/index.html">
+<meta property="og:url" content="http://m010929.github.io/archives/2023/04/index.html">
 <meta property="og:site_name" content="note">
 <meta property="og:description" content="个人笔记和一些其他内容">
 <meta property="og:locale" content="ch_ZN">
@@ -154,253 +154,41 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-数据库开发考试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-    <div class="article-entry" itemprop="articleBody">
+    
       
-        <h1 id="数据库开发"><a href="#数据库开发" class="headerlink" title="数据库开发"></a>数据库开发</h1><p>（本篇仅限用于应对南京大学软件学院数据库开发课程考试）</p>
-<ol>
-<li><p>视图可以使用的场景</p>
-<blockquote>
-<p>控制权限，重构数据库需要满足原有应用的访问</p>
-</blockquote>
-</li>
-<li><p>不能把数据库当作黑盒使用，因为每个数据库是非常不同的：锁机制（基本差别），三值理论（细微的差别（比如对NULL值的处理））</p>
-</li>
-</ol>
-<blockquote>
-<p>现实存在并发，我们需要保持数据的一致性，所以要做并发控制锁机制，使得并发控制成为可能不同的数据库，而实现锁机制是不一样的。比如Oracle实现的锁机制：<br>只有修改才加行级锁<br>Read绝对不会对数据加锁<br>Writer不会阻塞Reader<br>读写器绝对不会阻塞写入器<br>这种无阻塞设计有一个副作用，就是如有需要，开发人员自己做一些工作来保证一次最多只有一个用户访问一行数据。</p>
-<p>Null值造成的数据库迁移障碍：<br>在不同的语言元素中（也就是在sql语句中，不同的模块），Unknown逻辑结果和NULL处理方式也不相同。</p>
-</blockquote>
-<ol start="3">
-<li><p>基于磁盘构建索引结构</p>
-<blockquote>
-<p>选择b树，原因：高扇出（更多子节点）低高度（减少遍历次数）<br><img src="/../img/DBAimg/DBA01.png"><br>节点分裂（比如插入节点）怎么来做（过程）:（下面节点要分裂，上面要插入）<br><img src="/../img/DBAimg/DBA02.png"><br>查找：从根节点到叶节点的单向遍历<br>从根节点上执行二分搜索算法，将要搜索的K，与存储在根节点中的Kn进行 比较，直到找到大于K的第一个分隔键，这样定位了一个要搜索的子树，顺 着相应指针继续相同的搜索过程，直到目标叶节点，找到数据主文件指针</p>
-</blockquote>
-</li>
-<li><p>二级索引用文件偏移量，二级索引直接指向主键索引（优劣）</p>
-</li>
-<li><p>物理组织形式，分槽页，如果出现更新，30%原则</p>
-<blockquote>
-<p>物理组织形式通用原理<br><img src="/../img/DBAimg/DBA03.png"><br>数据库的表结构(schema)一般是固定的，指定了字段的数量、顺序和类型</p>
-</blockquote>
-</li>
-</ol>
-<blockquote>
-<p>页（page）的结构：每个page都是 一连串的三元组，k:key; v:关联值; p:指针</p>
-<p>分槽页：</p>
-<ol>
-<li>变长记录的问题：管理可用空间</li>
-<li>需要满足</li>
-</ol>
-<p>  最小开销的变长存储需求</p>
-<p>  回收已删除记录的空间</p>
-<p>  引用页中的记录，无论它在哪</p>
-</blockquote>
-<p>删除不想要的字符，replace语句，计算平均值，计算中位数</p>
-<p>bom问题（多个父节点），简单树是单一父节点，需要多表存储，计算百分比</p>
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2023" class="archive-year">2023</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2023/04/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91%E8%80%83%E8%AF%95/" class="archive-article-date">
+  	<time datetime="2023-04-06T12:39:49.391Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-06</time>
+</a>
+        </div>
+    	 
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/04/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91%E8%80%83%E8%AF%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-cloudCaculate" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="云计算"><a href="#云计算" class="headerlink" title="云计算"></a>云计算</h1><p>说明：以下笔记内容均来自南京大学云计算选修课课程内容复习</p>
-        
-          <a class="article-more-a" href="/2022/10/29/cloudCaculate/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/10/29/cloudCaculate/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-OS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h2 id="操作系统概论"><a href="#操作系统概论" class="headerlink" title="操作系统概论"></a>操作系统概论</h2><h3 id="操作系统与计算机系统"><a href="#操作系统与计算机系统" class="headerlink" title="操作系统与计算机系统"></a>操作系统与计算机系统</h3><p>OS是计算机系统最基础的系统软件，管理软硬件资源、控制程序执行，改善人机界面，合理组织计算机工作流程，为用户使用计算机提供良好运行环境</p>
-<p>OS是计算机系统的公共软件基础设施，所有应用程序共用OS服务，且OS内核是反应式reactive机制（中断驱动的）</p>
-<p>从用户角度看，OS管理计算机系统的各种资源，扩充硬件的功能，控制程序的执行 </p>
-<p>从人机交互看，OS是用户与机器的接口，提供良好的人机界面，方便用户使用计算机 </p>
-<p>从系统结构看，OS是一个大型软件系统，其功能复杂，体系庞大，采用层次式、模块化的程序结构</p>
-        
-          <a class="article-more-a" href="/2022/09/25/OS/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/09/25/OS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-express" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="note-of-Express"><a href="#note-of-Express" class="headerlink" title="note of Express"></a>note of Express</h1><h2 id="1-初接触express"><a href="#1-初接触express" class="headerlink" title="1 初接触express"></a>1 初接触express</h2><h3 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h3><p>express为Node.js上的web开发框架</p>
-<p>Express 框架核心特性：</p>
-<p>可以设置中间件来响应 HTTP 请求。</p>
-<p>定义了路由表用于执行不同的 HTTP 请求动作。</p>
-<p>可以通过向模板传递参数来动态渲染 HTML 页面。</p>
-        
-          <a class="article-more-a" href="/2022/09/24/express/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/09/24/express/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -422,9 +210,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
