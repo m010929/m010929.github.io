@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://m010929.github.io">
-  <title>Archives | note</title>
+  <title>note</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人笔记和一些其他内容">
-<meta property="og:type" content="website">
+  <meta name="description" content="数据结构复习">
+<meta property="og:type" content="article">
 <meta property="og:title" content="note">
-<meta property="og:url" content="http://m010929.github.io/archives/index.html">
+<meta property="og:url" content="http://m010929.github.io/2023/04/20/dataStructure/index.html">
 <meta property="og:site_name" content="note">
-<meta property="og:description" content="个人笔记和一些其他内容">
+<meta property="og:description" content="数据结构复习">
 <meta property="og:locale" content="ch_ZN">
+<meta property="article:published_time" content="2023-04-20T14:21:06.252Z">
+<meta property="article:modified_time" content="2023-04-20T15:28:08.214Z">
 <meta property="article:author" content="MaZirui">
 <meta name="twitter:card" content="summary">
   
@@ -152,158 +154,205 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-dataStructure" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数据结构复习"><a href="#数据结构复习" class="headerlink" title="数据结构复习"></a>数据结构复习</h1><span id="more"></span>
+<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><h3 id="基本概念与术语"><a href="#基本概念与术语" class="headerlink" title="基本概念与术语"></a>基本概念与术语</h3><p>可以用（抽象数据类型）定义一个完整的数据结构</p>
+<p>（集 合、树和图）是非线性数据结构；（线性表）是典型的线性结构</p>
+<p>属于逻辑结构的是（有序表）</p>
+<ul>
+<li>顺序表、哈希表和单链表是三种不同的数据结构，既描述逻辑结构，又描述存储结构和数据<br>运算。而有序表是指关键字有序的线性表，仅描述元素之间的逻辑关系，它既可以链式存储，又<br>可以顺序存储，故属于逻辑结构。</li>
+</ul>
+<p>与数据的存储结构无关的术语是（栈)</p>
+<ul>
+<li>数据的存储结构有顺序存储、链式存储、索引存储和散列存储。循环队列（易错点）是用顺<br>序表表示的队列，是一种数据结构。栈是一种抽象数据类型，可采用顺序存储或链式存储，只表<br>示逻辑结构。</li>
+</ul>
+<p>以下关于数据结构的说法中，正确的是（ A</p>
+<ul>
+<li>A. 数据的逻辑结构独立于其存储结构</li>
+<li>B. 数据的存储结构独立于其逻辑结构</li>
+<li>C. 数据的逻辑结构唯一决定其存储结构</li>
+<li>D. 数据结构仅由其逻辑结构和存储结构决定<ul>
+<li>数据的逻辑结构是从面向实际问题的角度出发的，只采用抽象表达方式，独立于存储结构， 数据的存储方式有多种不同的选择；而数据的存储结构是逻辑结构在计算机上的映射，它不能独立于逻辑结构而存在。数据结构包括三个要素（逻辑结构，存储结构，数据的运算），缺一不可</li>
+</ul>
+</li>
+</ul>
+<p>在存储数据时，不仅要存储数据元素的值，而且要存储数据元素之间的关系</p>
+<p>链式存储设计时，各个不同结点的存储空间可以不连续，但结点内的存储单元地址必须连续</p>
+<h3 id="算法和算法评价"><a href="#算法和算法评价" class="headerlink" title="算法和算法评价"></a>算法和算法评价</h3><h4 id="算法概念"><a href="#算法概念" class="headerlink" title="算法概念"></a>算法概念</h4><p>一个算法应该是：问题求解步骤的描述</p>
+<ul>
+<li>程序不一定满足有穷性,如死循环、操作系统等，而算法必须有穷。算法代表对问题求解步骤的描述，而程序则是算法在计算机上的特定实现。不少读者认为”要满足五个基本特性”，它只是算法的必要条件，不能成为算法的定义。</li>
+</ul>
+<h4 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p><em>这个不会的话代码白写了</em></p>
+<h4 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h4><p><em>这个不会的话代码白写了</em></p>
+<h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><ul>
+<li>有相同数据类型</li>
+<li>有限序列</li>
+<li>除第一个元素外，每个元素有且仅有一个直接前驱。除最后一个元素外，每个元素有且仅有一个直接后继</li>
+</ul>
+<h3 id="线性表的顺序表示"><a href="#线性表的顺序表示" class="headerlink" title="线性表的顺序表示"></a>线性表的顺序表示</h3><p><em>理解成数组就行</em></p>
+<h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><p>线性表的顺序存储又称顺序表。它是用一组地址连续的存储单元依次存储线性表中的数据元素，从而使得逻辑上相邻的两个元素在物理位置上也相邻。第1个元素存储在线性表的起始位置, 第i个元素的存储位置后面紧接着存储的是第i+1个元素，称i为元素ai在线性表中的位序。因此，顺序表的特点是<em><strong>表中元素的逻辑顺序与其物理顺序相同</strong></em>。</p>
+<p>每个数据元素的存储位置都和线性表的起始位置相差一个和该数据元素的位序成正比的常数，因此，顺序表中的任意一个数据元素都可以随机存取，所以<em><strong>线性表的顺序存储结构是一种随机存取的存储结构</strong></em>。</p>
+<h4 id="相关例题"><a href="#相关例题" class="headerlink" title="相关例题"></a>相关例题</h4><p>从顺序表中删除具有最小值的元素(假设唯一)并由函数返回被删元素的值。空出的位置由最后一个元素填补，若顺序表为空，则显示出错信息并退出运行</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">Del_Min</span><span class="params">((SqList &amp;LZElemType &amp;value)&#123;</span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="keyword">if</span>(L.length==<span class="number">0</span>)</span></span></span><br><span class="line"><span class="params"><span class="function">        <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">//表空，中止操作返回</span></span></span></span><br><span class="line"><span class="params"><span class="function">    value=L.data[<span class="number">0</span>];</span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="type">int</span> pos=<span class="number">0</span>; 〃假定<span class="number">0</span>号元素的值最小</span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="keyword">for</span>(<span class="type">int</span> i=l;i&lt;L.length;i++)&#123; <span class="comment">//循环，寻找具有最小值的元素</span></span></span></span><br><span class="line"><span class="params"><span class="function">        <span class="keyword">if</span>(L.data[i]&lt;value)&#123; <span class="comment">//让value记忆当前具有最小值的元素</span></span></span></span><br><span class="line"><span class="params"><span class="function">            value-L.data[i];</span></span></span><br><span class="line"><span class="params"><span class="function">            pos=i;</span></span></span><br><span class="line"><span class="params"><span class="function">        &#125;</span></span></span><br><span class="line"><span class="params"><span class="function">    &#125;</span></span></span><br><span class="line"><span class="params"><span class="function">    L.data[pos]=L.data[L.length<span class="number">-1</span>]; <span class="comment">//空出的位置由最后一个元素填补</span></span></span></span><br><span class="line"><span class="params"><span class="function">    L.length--;</span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="keyword">return</span> <span class="literal">true</span>;</span></span></span><br><span class="line"><span class="params"><span class="function">&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>设计一个高效算法，将顺序表Z的所有元素逆置，要求算法的空间复杂度为0(1)</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Reverse</span><span class="params">(Sqlist &amp;L)</span></span>&#123;</span><br><span class="line">    ElemType temp; <span class="comment">//辅助变量</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i^O;i&lt;L.length/<span class="number">2</span>;i++)&#123;</span><br><span class="line">        temp=L.data [i]; <span class="comment">//交换 L.data [i]与 L.data [L.length-i-1 ]</span></span><br><span class="line">        L.data[i]=L.data[L.length-i<span class="number">-1</span>]; L, data[L.length-i<span class="number">-1</span>]^temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对长度为n的顺序表L,编写一个时间复杂度为O(n)、空间复杂度为O(1)的算法，该算法删除线性表中所有值为x的数据元素</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">del_x_l</span><span class="params">(Sqlist &amp;L,ElemType x)</span></span>&#123;</span><br><span class="line">    <span class="comment">//本算法实现删除顺序表L中所有值为x的数据元素</span></span><br><span class="line">    <span class="type">int</span> k=<span class="number">0</span>,i; <span class="comment">//记录值不等于x的元素个数</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;L.length;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(L.data[i]!=x)&#123;</span><br><span class="line">            L.data[k]=L.data[i];</span><br><span class="line">            k++; <span class="comment">//不等于x的元素增1 </span></span><br><span class="line">        &#125;</span><br><span class="line">        L.length==k; <span class="comment">//顺序表L的长度等于k </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/04/20/dataStructure/" class="archive-article-date">
-  	<time datetime="2023-04-20T14:21:06.252Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-20</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/04/12/linuxPL/" class="archive-article-date">
-  	<time datetime="2023-04-12T14:19:26.410Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-12</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/04/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91%E8%80%83%E8%AF%95/" class="archive-article-date">
-  	<time datetime="2023-04-06T12:39:49.391Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-06</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/10/29/cloudCaculate/" class="archive-article-date">
-  	<time datetime="2022-10-29T06:56:14.209Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-29</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      </div>
+    </span>
+  </div>
+</div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://m010929.github.io/2023/04/20/dataStructure/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/25/OS/" class="archive-article-date">
-  	<time datetime="2022-09-25T08:10:46.683Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-25</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/express/" class="archive-article-date">
-  	<time datetime="2022-09-24T13:18:46.232Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+  
+    <a href="/2023/04/12/linuxPL/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text">数据结构复习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%AA%E8%AE%BA"><span class="toc-number">1.1.</span> <span class="toc-text">绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%9C%AF%E8%AF%AD"><span class="toc-number">1.1.1.</span> <span class="toc-text">基本概念与术语</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E5%92%8C%E7%AE%97%E6%B3%95%E8%AF%84%E4%BB%B7"><span class="toc-number">1.1.2.</span> <span class="toc-text">算法和算法评价</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">算法概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">时间复杂度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">空间复杂度</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A1%A8"><span class="toc-number">1.2.</span> <span class="toc-text">线性表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">1.2.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.2.2.</span> <span class="toc-text">线性表的顺序表示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E4%BE%8B%E9%A2%98"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">相关例题</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -326,8 +375,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
